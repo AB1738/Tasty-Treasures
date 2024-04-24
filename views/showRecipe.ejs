@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/showRecipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title><%= recipe.recipe.label  %> </title>
+</head>
+<body>
+<%- include('partials/nav') %>
+
+
+<div class="recipe-container">
+    <div class="ingredients">
+        <h4><strong>Ingredients</strong></h4>
+        <% for(let i=0;i<recipe.recipe.ingredients.length;i++) {%>
+            <p class="recipe-ingredients"><strong><%= [i+1] %>:</strong> <%= recipe.recipe.ingredients[i].text %></p>
+            <img src="<%= recipe.recipe.ingredients[i].image %>" alt="" class="ingredient-images">
+        <% } %>    
+    </div>
+    <div class="recipe-image-wrapper">
+        <div class="recipe-image-container">
+            <h3 class="recipe-label"><%= recipe.recipe.label %></h3>
+            <img src="<%= recipe.recipe.image %>" alt="" class="recipe-image">
+        </div>
+       
+       
+       
+    </div>
+
+<div class="recipe-info-wrapper">
+    <div class="recipe-info">
+        <p><strong>Servings:</strong> <%= recipe.recipe.yield %></p>
+        <p><strong>Total Calories:</strong> <%= recipe.recipe.calories.toFixed(2) %></p>
+        <p><strong>Calories per serving:</strong> <%= (recipe.recipe.calories.toFixed(2)/recipe.recipe.yield).toFixed(2) %> </p>
+        <p><strong>Total Fat:</strong> <%= recipe.recipe.totalNutrients.FAT.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.FAT.unit %></p>
+        <p><strong>Fat per serving:</strong> <%= (recipe.recipe.totalNutrients.FAT.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.FAT.unit %></p>
+        <p><strong>Total Carbs:</strong> <%= recipe.recipe.totalNutrients.CHOCDF.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.CHOCDF.unit %></p>
+        <p><strong>Carbs per serving:</strong> <%= (recipe.recipe.totalNutrients.CHOCDF.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.CHOCDF.unit %></p>
+        <p><strong>Total Sugar:</strong> <%= recipe.recipe.totalNutrients.SUGAR.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.SUGAR.unit %></p>
+        <p><strong>Sugar per serving:</strong> <%= (recipe.recipe.totalNutrients.SUGAR.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.SUGAR.unit %></p>
+        <p><strong>Total Protein:</strong> <%= recipe.recipe.totalNutrients.PROCNT.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.PROCNT.unit %></p>
+        <p><strong>Protein per serving:</strong> <%= (recipe.recipe.totalNutrients.PROCNT.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.PROCNT.unit %></p>
+        <p><strong>Total Cholesterol:</strong> <%= recipe.recipe.totalNutrients.CHOLE.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.CHOLE.unit %></p>
+        <p><strong>Cholesterol per serving:</strong> <%= (recipe.recipe.totalNutrients.CHOLE.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.CHOLE.unit %></p>
+        <p><strong>Sodium:</strong> <%= recipe.recipe.totalNutrients.NA.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.NA.unit %></p>
+        <p><strong>Sodium per serving:</strong> <%= (recipe.recipe.totalNutrients.NA.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.NA.unit %></p>
+        <p><strong>Total Vitamin A:</strong> <%= recipe.recipe.totalNutrients.VITA_RAE.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.VITA_RAE.unit %></p>
+        <p><strong>Vitamin A per serving:</strong> <%= (recipe.recipe.totalNutrients.VITA_RAE.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.VITA_RAE.unit %></p>
+        <p><strong>Total Vitamin C:</strong> <%= recipe.recipe.totalNutrients.VITC.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.VITC.unit %></p>
+        <p><strong>Vitamin C per serving:</strong> <%= (recipe.recipe.totalNutrients.VITC.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.VITC.unit %></p>
+        <p><strong>Total Vitamin D:</strong> <%= recipe.recipe.totalNutrients.VITD.quantity.toFixed(2) %> <%= recipe.recipe.totalNutrients.VITD.unit %></p>
+        <p><strong>Vitamin D per serving:</strong> <%= (recipe.recipe.totalNutrients.VITD.quantity.toFixed(2)/recipe.recipe.yield).toFixed(2) %> <%= recipe.recipe.totalNutrients.VITD.unit %></p>
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

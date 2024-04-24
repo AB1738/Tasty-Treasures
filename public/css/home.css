@@ -1,0 +1,64 @@
+body{
+
+background-image: url('/img/donuts.jpg');
+background-color: #73d9ee;
+    background-size: cover;
+    background-position: center   ;
+  
+
+    background-repeat: no-repeat;
+    margin: 0px;
+    font-family: nunito,sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+h1{
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width:1px;
+  -webkit-text-stroke-color: black;
+}
+
+@media(min-width:1921px){
+    body{
+        background-size: cover;
+    }
+}
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.info-wrapper{
+
+    background-image: url('/img/lollipop.jpg');
+    background-size: cover;
+    background-position: center;
+    width:30%;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: black;
+    text-align: center;
+
+}
+
+
+  @media(max-width:1000px){
+    .info-wrapper{
+        width:60%;
+    }
+  }
+  @media(max-width:500px){
+    .info-wrapper{
+        font-size: .8rem;
+    }
+  }
+  @media(max-width:300px){
+    .info-wrapper{
+        font-size: .7rem;
+    }
+  }
+

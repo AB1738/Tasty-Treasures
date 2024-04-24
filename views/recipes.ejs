@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recipes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title><%= recipe %> recipes</title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    <div class="container">
+
+        <% if(recipeArray.length>0) {%>
+        <% for(let i=0; i<recipeArray.length;i++){ %>
+            <% const url=recipeArray[i].uri %>
+            <% const parts = url.split('_') %>
+            <% const id = parts[1] %>
+            <a href="/recipe/<%= id %>">
+            <div class="recipe">
+                <h4 class="recipe-header"><%= recipeArray[i].label %></h4>
+                <div class="recipe-info">
+                    <img src="<%= recipeArray[i].image %>" alt="" class="recipe-image">
+                    <div class="nutrition-info">
+                        <p>Servings: <%= recipeArray[i].yield %></p>
+                        <p>Calories per serving: <%= (recipeArray[i].calories.toFixed(2)/recipeArray[i].yield).toFixed(2) %></p>
+                        <p>Protein per serving: <%= (recipeArray[i].totalNutrients.PROCNT.quantity.toFixed(2)/recipeArray[i].yield).toFixed(2) %> g</p>
+                        <p>Carbs per serving: <%= (recipeArray[i].totalNutrients.CHOCDF.quantity.toFixed(2)/recipeArray[i].yield).toFixed(2) %> g</p>
+                        <p>Fat per serving: <%= (recipeArray[i].totalNutrients.FAT.quantity.toFixed(2)/recipeArray[i].yield).toFixed(2) %> g</p>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+        <% }}else{%>
+            <h1>No results found for <%= recipe %></h1>
+        <% } %>
+        
+        </div>
+</body>
+</html>

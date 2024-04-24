@@ -1,0 +1,210 @@
+.nav{
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    color: black;
+    border-bottom: 3px solid #fff;
+    height: 6rem;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background: linear-gradient(to right, #edbaef 52.4%, #73d9ee 47.6%);
+    font-size: 1.2rem;
+    line-height: 1rem;
+    font-family: nunito,sans-serif;
+   
+}
+h5{
+    top: 0;
+    left: 0;
+}
+#recipe-form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .50rem;
+}
+input{
+    text-align: center;
+
+}
+.macros{
+    display: none;
+    color: #aa6611;
+    float: left;
+    overflow: hidden;
+}
+.macros-content{
+    position: absolute;
+    top: 80%;
+    right: 30%;
+    background-image: url('/img/gradient.png');
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.macros-content label,
+.macros-content input{
+    float: left;
+    color: black;
+    padding: .75rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+@media(max-width:840px){
+    .macros-content label,
+    .macros-content input{
+        float: none;
+    }
+}
+
+.show-macro-input{
+    flex-grow:1;
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #edbaef;
+}
+.show-macro-input2{
+    flex-grow:1;
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #edbaef;
+    display: none;
+}
+  .show-macro-input:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: .138rem;
+    width: 50%;
+    background: #edbaef;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .show-macro-input:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: #edbaef;
+    height: 50%;
+    width: .138rem;
+  }
+  
+  .show-macro-input:hover:before,
+  .show-macro-input:hover:after {
+    background: #fff;
+    transition: 0.2s;
+  }
+  
+  .show-macro-input:hover {
+    background-color: #edbaef;
+    transition: 0.2s;
+  }
+  .show-macro-input2:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: .138rem;
+    width: 50%;
+    background: #73d9ee;
+    top: 50%;
+    left: 50%;
+  }
+
+  
+  .show-macro-input2:hover:before,
+  .show-macro-input2:hover:after {
+    background: #fff;
+    transition: 0.2s;
+  }
+  
+  .show-macro-input2:hover {
+    background-color: #73d9ee;
+    transition: 0.2s;
+  }
+
+
+
+.form-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-form-info{
+    flex:3
+}
+
+.form-submit-btn{
+    height: fit-content;
+    width: fit-content;
+    background-color: #edbaef;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form-submit-btn:hover{
+    background-color: white;
+    color: #73d9ee;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.show-macro-input-wrapper{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+@media(max-width:450px){
+    .form-wrapper{
+        width: 50%;
+
+    }
+    .form-submit-btn{
+        background-color: #73d9ee;
+    }
+}
+@media(max-width:396px){
+    .show-macro-input{
+        border: 2px solid #73d9ee;
+    }
+    .show-macro-input2{
+        border: 2px solid #73d9ee;
+    }
+.show-macro-input:after{
+    background: #73d9ee;
+
+}
+.show-macro-input:before {
+    background: #73d9ee;
+}
+.show-macro-input:hover{
+    background-color: #73d9ee;
+
+}
+.show-macro-input2:after{
+    background: #edbaef;
+
+}
+.show-macro-input2:hover{
+    background-color: #edbaef;
+
+}
+}
+

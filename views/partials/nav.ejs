@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="/css/nav.css">
+
+<nav class="nav">
+    <!-- <h5>Tasty Treasures</h5> -->
+    <div class="form-wrapper">
+        <form action="/recipes" method="POST" id="recipe-form">
+            <div class="main-form-info">
+                <label for="recipes" id="recipe-label">Search For Recipe:</label>
+                <input type="text" name="recipe" id="recipes" required>
+            </div>
+           
+            <div class="show-macro-input-wrapper">
+                <div class="show-macro-input"></div>
+                <div class="show-macro-input2"></div>
+
+            </div>
+            <div class="macros">
+            <div class="macros-content">
+                <div class="calories">
+                    <label for="min_calories">Min Calories: </label>
+                    <input type="number" name="min_calories" id="min_calories" min="0" max="10000"class='min'>
+                    <label for="max_calories">Max Calories: </label>
+                    <input type="number" name="max_calories" id="max_calories" min="0" max="10000" class="max">
+                </div>
+        
+                <div class="protein">
+                    <label for="min_protein">Min Protein(g) </label>
+                    <input type="number" name="min_protein" id="min_protein" min="0" max="10000" class="min">
+                    <label for="max_protein">Max Protein(g) </label>
+                    <input type="number" name="max_protein" id="max_protein"min="0" max="10000" class="max">
+                </div>
+              
+                <div class="carbs">
+                    <label for="min_carbs">Min Carbs(g) </label>
+                    <input type="number" name="min_carbs" id="min_carbs"min="0" max="10000" class="min">
+                    <label for="max_carbs">Max Carbs(g) </label>
+                    <input type="number" name="max_carbs" id="max_carbs"min="0" max="10000" class="max">
+                </div>
+             
+                <div class="fat">
+                    <label for="min_fat">Min Fat(g) </label>
+                    <input type="number" name="min_fat" id="min_fat"min="0" max="10000" class="min">
+                    <label for="max_fat">Max Fat(g) </label>
+                    <input type="number" name="max_fat" id="max_fat"min="0" max="10000" class="max">
+                </div>
+            </div>
+            </div>
+        
+         
+            <button type="submit" class="form-submit-btn">Search</button>
+        </form>
+    </div>
+    
+  </nav>
+
+
+  <script src="/js/nav.js"></script>
+
+
+  <style>
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+      cursor: pointer;
+      font-size: 16px;  
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+    
+    .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+      background-color: red;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    
+    .show {
+      display: block;
+    }
+
+
+    </style>
+
+    
+
